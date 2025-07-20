@@ -45,6 +45,12 @@ nav {
   text-decoration: none;
 }
 
+.nav-list-container {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
 .nav-lists {
   display: flex;
   align-items: center;
@@ -385,11 +391,6 @@ nav {
 }
 
 /* ----- News Feed Section ----- */
-.news-feed {
-  padding: 80px 2rem;
-  background: #f8f9fa;
-}
-
 .news-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -436,11 +437,6 @@ nav {
 }
 
 /* ----- Events Carousel ----- */
-.events {
-  padding: 80px 2rem;
-  background: white;
-}
-
 .carousel-container {
   position: relative;
   max-width: 1000px;
@@ -638,6 +634,10 @@ footer {
     display: none;
   }
 
+  .logo {
+    font-size: 20px;
+  }
+
   .mobile-menu {
     display: flex;
   }
@@ -666,7 +666,7 @@ footer {
 
 /* About Us Page */
 /* ----- Section Styling ----- */
-.section {
+section {
   padding: 80px 0;
 }
 
@@ -1209,6 +1209,10 @@ footer {
 
   .container {
     padding: 0 1rem;
+  }
+
+  .form-container {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1874,13 +1878,6 @@ footer {
 .difficulty-advanced {
   background: #f8d7da;
   color: #721c24;
-}
-
-.hacks-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
 }
 
 .hack-card {

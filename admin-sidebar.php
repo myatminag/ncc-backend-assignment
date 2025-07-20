@@ -8,11 +8,17 @@
 </head>
 
 <body>
+  <button class="mobile-menu-toggle" onclick="toggleSidebar()" aria-label="Toggle Menu">
+    ☰
+  </button>
 
   <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
-      <h2>🍽️ FoodFusion</h2>
-      <p>Admin Dashboard</p>
+      <div>
+        <h2>🍽️ FoodFusion</h2>
+        <p>Admin Dashboard</p>
+      </div>
+      <div class="mobile-close-btn" onclick="toggleSidebar()" aria-label="Close Sidebar">✖</div>
     </div>
     <ul class="sidebar-nav">
       <li>
@@ -68,4 +74,9 @@
       link.classList.remove('active');
     }
   });
+
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('open');
+  }
 </script>

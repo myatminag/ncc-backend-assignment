@@ -29,7 +29,7 @@ include "connection.php";
     </div>
   </section>
 
-  <section class="recipes-section">
+  <section>
     <div class="container">
       <form method="GET" class="search-filter-container">
         <div class="search-box">

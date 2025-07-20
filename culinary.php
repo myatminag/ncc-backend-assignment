@@ -56,7 +56,7 @@ while ($row = $result->fetch_assoc()) {
     </div>
   </section>
 
-  <section class="section" id="video-tutorials">
+  <section id="video-tutorials">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Video Tutorials</h2>
@@ -125,7 +125,7 @@ while ($row = $result->fetch_assoc()) {
     </div>
   </section>
 
-  <section class="section" id="downloads">
+  <section>
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Free Downloads</h2>
@@ -133,7 +133,7 @@ while ($row = $result->fetch_assoc()) {
           kitchen</p>
       </div>
 
-      <div class="hacks-grid" id="downloadGrid">
+      <div class="recipes-grid" id="downloadGrid">
         <?php foreach ($pdfs as $pdf): ?>
           <div class="download-item">
             <div class="download-icon">📄</div>
@@ -150,7 +150,7 @@ while ($row = $result->fetch_assoc()) {
         <?php endforeach; ?>
       </div>
 
-      <div class="hacks-grid" id="downloadGrid">
+      <div class="recipes-grid" id="downloadGrid">
         <?php foreach ($videos as $video): ?>
           <div class="video-card">
             <div class="video-thumbnail">
@@ -172,14 +172,14 @@ while ($row = $result->fetch_assoc()) {
     </div>
   </section>
 
-  <section class="section" id="kitchen-hacks">
+  <section id="kitchen-hacks">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Kitchen Hacks & Tips</h2>
         <p class="section-subtitle">Discover time-saving techniques and clever tricks to elevate your cooking game</p>
       </div>
 
-      <div class="hacks-grid" id="hacksGrid"></div>
+      <div class="recipes-grid" id="hacksGrid"></div>
     </div>
   </section>
 

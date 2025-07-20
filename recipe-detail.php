@@ -66,7 +66,7 @@ if (isset($_GET['id'])) {
         <p><?= htmlspecialchars($recipe['name']) ?></p>
       </div>
 
-      <section class="recipe-header">
+      <div class="recipe-header">
         <div class="recipe-main-info">
           <h1 class="recipe-title">
             <?= htmlspecialchars($recipe['name']) ?>
@@ -132,15 +132,15 @@ if (isset($_GET['id'])) {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section class="ingredients-section">
+      <div class="ingredients-section">
         <h2 class="ingredients-title">🛒 Ingredients</h2>
 
         <p class="ingredients-text">
           <?= htmlspecialchars($recipe['ingredients']) ?>
         </p>
-      </section>
+      </div>
     </div>
   </main>
 

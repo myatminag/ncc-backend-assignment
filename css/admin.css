@@ -10,7 +10,74 @@ body {
   color: #333;
 }
 
-/* Sidebar */
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.auth-container {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.auth-header {
+  background: linear-gradient(135deg, #ff6b6b, #ffa500);
+  color: white;
+  padding: 24px;
+  text-align: center;
+}
+
+.auth-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.auth-navigation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.2rem;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+
+  span {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.form-container {
+  padding: 30px;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  background: linear-gradient(135deg, #ff6b6b, #ffa500);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-menu-toggle:hover {
+  opacity: 0.9;
+}
+
 .sidebar {
   position: fixed;
   left: 0;
@@ -23,10 +90,27 @@ body {
   z-index: 1000;
 }
 
+.mobile-close-btn {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: right;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .mobile-close-btn {
+    display: block;
+  }
+}
+
 .sidebar-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 2rem;
-  padding: 0 1rem;
+  padding: 0 2rem;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
 }
 
 .sidebar-header h2 {
@@ -387,6 +471,30 @@ body.modal-open {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 0.9rem;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 2.4rem;
+  right: 1rem;
+  cursor: pointer;
+  color: #888;
+}
+
+.password-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none;
 }
 
 .form-textarea {

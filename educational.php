@@ -93,7 +93,7 @@
         </p>
       </div>
 
-      <div class="hacks-grid">
+      <div class="recipes-grid">
         <div class=" video-card">
           <div class="video-thumbnail" style='background-image: url(./images/renewable-energy.jpg);'>
           </div>
@@ -137,7 +137,7 @@
         </p>
       </div>
 
-      <div class="hacks-grid" id="pdfsGrid">
+      <div class="recipes-grid" id="pdfsGrid">
         <div class="download-item">
           <div class="download-icon">☀️</div>
           <h3 class="download-title">Solar Energy Complete Guide</h3>

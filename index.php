@@ -31,7 +31,7 @@ include "connection.php";
     </div>
   </section>
 
-  <section class="news-feed" id="recipes">
+  <section>
     <div class="container">
       <h2 class="section-title">Featured Recipes & Culinary Trends</h2>
       <div class="recipes-grid">
@@ -115,7 +115,7 @@ include "connection.php";
     </div>
   </section>
 
-  <section class="events" id="events">
+  <section>
     <div class="container">
       <h2 class="section-title">Upcoming Cooking Events</h2>
       <div class="carousel-container">

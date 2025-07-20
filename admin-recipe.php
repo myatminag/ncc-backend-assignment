@@ -2,6 +2,21 @@
 
 include "connection.php";
 
+if (isset($_SESSION["name"]) && $_SESSION["type"] && isset($_SESSION["email"])) {
+  $email = $_SESSION["email"];
+  $type = $_SESSION["type"];
+  $username = $_SESSION["name"];
+  $loggedInUserId = $_SESSION["id"];
+} else {
+  echo "
+    <script>
+      window.alert('You must be logged in to access this page. Redirecting you back...')
+      window.location = 'admin-sign-in.php';
+    </script>
+  ";
+  exit();
+}
+
 $search = $_GET['search'] ?? '';
 $cuisine = $_GET['cuisine'] ?? '';
 $difficulty = $_GET['difficulty'] ?? '';
@@ -151,8 +166,11 @@ if (isset($_GET['delete'])) {
     <div class="header">
       <h1>Recipe Management</h1>
       <div class="user-info">
-        <span>Welcome, Admin</span>
-        <div class="user-avatar">A</div>
+        <?php if (isset($_SESSION['email'])): ?>
+          <form action="admin-logout.php" method="POST">
+            <button type="submit" class="btn-secondary">Logout</button>
+          </form>
+        <?php endif; ?>
       </div>
     </div>
 
