@@ -183,6 +183,7 @@ function switchForm(mode) {
   const signupSection = document.getElementById("signupSection");
   const signinSection = document.getElementById("signinSection");
   const authTitle = document.getElementById("authTitle");
+  const resetSection = document.getElementById("resetSection");
   const authSubtitle = document.getElementById("authSubtitle");
 
   if (mode === "signup") {
@@ -192,13 +193,20 @@ function switchForm(mode) {
     signinSection.classList.remove("active");
     authTitle.textContent = "Join FoodFusion";
     authSubtitle.textContent = "Start your culinary fusion journey today!";
-  } else {
+  } else if (mode === "signin") {
     signinToggle.classList.add("active");
     signupToggle.classList.remove("active");
     signinSection.classList.add("active");
     signupSection.classList.remove("active");
+    resetSection.classList.remove("active");
     authTitle.textContent = "Welcome Back";
     authSubtitle.textContent = "Sign in to continue your culinary journey!";
+  } else if (mode === "reset") {
+    signupSection.classList.remove("active");
+    signinSection.classList.remove("active");
+    resetSection.classList.add("active");
+    authTitle.textContent = "Reset Password";
+    authSubtitle.textContent = "We'll help you get back into your account!";
   }
 }
 

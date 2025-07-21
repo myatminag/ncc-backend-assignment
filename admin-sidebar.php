@@ -27,6 +27,11 @@
         </a>
       </li>
       <li>
+        <a href="admin-user.php" class="nav-link">
+          👥 Users
+        </a>
+      </li>
+      <li>
         <a href="admin-recipe.php" class="nav-link">
           🍽️ Recipes
         </a>
