@@ -9,7 +9,7 @@ if (!isset($_SESSION["last_attempt_time"])) {
   $_SESSION["last_attempt_time"] = 0;
 }
 
-$lockout_time = 60;
+$lockout_time = 180;
 $current_time = time();
 
 if (isset($_POST["signUpBtn"])) {
