@@ -532,6 +532,12 @@ body.modal-open {
   font-weight: bold;
 }
 
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
 .btn-secondary {
   background: #6c757d;
   color: white;

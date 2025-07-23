@@ -9,7 +9,7 @@ if (!isset($_SESSION["last_attempt_time"])) {
   $_SESSION["last_attempt_time"] = 0;
 }
 
-$lockout_time = 60;
+$lockout_time = 180;
 $current_time = time();
 
 if (isset($_POST["signInBtn"])) {
@@ -21,7 +21,7 @@ if (isset($_POST["signInBtn"])) {
         <script>
           sessionStorage.setItem('lockout', '$remaining');
           alert('Too many failed attempts. Try again in $remaining seconds.');
-          window.location='index.php';
+          window.location='admin-sign-in.php';
         </script>
       ";
       exit;
@@ -123,7 +123,8 @@ if (isset($_POST["signInBtn"])) {
             </span>
           </div>
 
-          <input type="submit" value="Sign In" class="btn-primary" style="width: 100%;" name="signInBtn" />
+          <input type="submit" value="Sign In" class="btn-primary" style="width: 100%;" name="signInBtn"
+            id="signInSubmitBtn" />
         </form>
         <div class="auth-navigation">
           <p>Don't have an account?</p>
@@ -136,6 +137,8 @@ if (isset($_POST["signInBtn"])) {
 
 </html>
 <script>
+  const signInBtn = document.getElementById("signInSubmitBtn");
+
   function togglePassword(toggleElement) {
     const wrapper = toggleElement.closest('.password-wrapper');
     const input = wrapper.querySelector('.password-input');
@@ -150,6 +153,31 @@ if (isset($_POST["signInBtn"])) {
       input.type = 'password';
       eyeOpen.classList.remove('hidden');
       eyeClosed.classList.add('hidden');
+    }
+  }
+
+  function disableLoginWithTimer(seconds) {
+    let remaining = seconds;
+    signInBtn.disabled = true;
+    signInBtn.value = `Try again in ${remaining}s`;
+
+    const interval = setInterval(() => {
+      remaining--;
+      signInBtn.value = `Try again in ${remaining}s`;
+
+      if (remaining <= 0) {
+        clearInterval(interval);
+        signInBtn.disabled = false;
+        signInBtn.value = "Sign In";
+        sessionStorage.removeItem("lockout");
+      }
+    }, 1000);
+  }
+
+  if (signInBtn) {
+    const lockout = sessionStorage.getItem("lockout");
+    if (lockout && parseInt(lockout) > 0) {
+      disableLoginWithTimer(parseInt(lockout));
     }
   }
 </script>
