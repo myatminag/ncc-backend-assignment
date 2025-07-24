@@ -35,7 +35,7 @@ if (isset($_POST["signInBtn"])) {
   $email = $_POST["email"];
   $password = $_POST["password"];
 
-  $query = "SELECT * FROM user WHERE email = ?";
+  $query = "SELECT * FROM user WHERE email = ? AND role_id = 2";
   $stmt = $connection->prepare($query);
   $stmt->bind_param("s", $email);
   $stmt->execute();
