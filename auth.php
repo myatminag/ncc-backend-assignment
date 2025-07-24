@@ -18,32 +18,35 @@ if (isset($_POST["signUpBtn"])) {
   $phone = $_POST["signUpPhone"];
   $password = $_POST["signUpPassword"];
   $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+  $role_id = 1; // 1 for user
 
-  $stmt = $connection->prepare("SELECT * FROM user WHERE username = ? OR email = ?");
-  $stmt->bind_param("ss", $username, $email);
+  $stmt = $connection->prepare("SELECT * FROM user WHERE phone = ? OR email = ?");
+  $stmt->bind_param("ss", $phone, $email);
   $stmt->execute();
   $checkResult = $stmt->get_result();
 
   if ($checkArray = mysqli_fetch_array($checkResult)) {
-    $checkName = $checkArray["username"];
     $checkEmail = $checkArray["email"];
+    $checkphone = $checkArray["phone"];
 
-    if ($username == $checkName) {
+    if ($phone == $checkphone) {
       echo "
         <script>
-          window.alert('Username already exists!')
+          window.alert('Phone number already exists!')
+          window.location = 'index.php';
         </script>
       ";
     } elseif ($email == $checkEmail) {
       echo "
         <script>
           window.alert('Email already exists!')
+          window.location = 'index.php';
         </script>
       ";
     }
   } else {
-    $stmt = $connection->prepare("INSERT INTO user (username, email, phone, password) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssss", $username, $email, $phone, $hashedPassword);
+    $stmt = $connection->prepare("INSERT INTO user (username, email, phone, password, role_id) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssi", $username, $email, $phone, $hashedPassword, $role_id);
     $stmt->execute();
 
     if ($stmt->affected_rows > 0) {
