@@ -25,25 +25,32 @@ if (isset($_POST["signUpBtn"])) {
   $stmt->execute();
   $checkResult = $stmt->get_result();
 
-  if ($checkArray = mysqli_fetch_array($checkResult)) {
-    $checkEmail = $checkArray["email"];
-    $checkphone = $checkArray["phone"];
+  $emailExists = false;
+  $phoneExists = false;
 
-    if ($phone == $checkphone) {
-      echo "
-        <script>
-          window.alert('Phone number already exists!')
-          window.location = 'index.php';
-        </script>
-      ";
-    } elseif ($email == $checkEmail) {
-      echo "
-        <script>
-          window.alert('Email already exists!')
-          window.location = 'index.php';
-        </script>
-      ";
+  while ($row = $checkResult->fetch_assoc()) {
+    if ($row['phone'] === $phone) {
+      $phoneExists = true;
     }
+    if ($row['email'] === $email) {
+      $emailExists = true;
+    }
+  }
+
+  if ($phoneExists) {
+    echo "
+      <script>
+        window.alert('Phone number already exists!');
+        window.location = 'index.php';
+      </script>
+    ";
+  } elseif ($emailExists) {
+    echo "
+      <script>
+        window.alert('Email already exists!');
+        window.location = 'index.php';
+      </script>
+    ";
   } else {
     $stmt = $connection->prepare("INSERT INTO user (username, email, phone, password, role_id) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("ssssi", $username, $email, $phone, $hashedPassword, $role_id);

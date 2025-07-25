@@ -28,7 +28,7 @@
 
   <div class="container">
     <div class="privacy-content">
-      <section id="introduction" class="privacy-section">
+      <div id="introduction">
         <h2>1. Introduction</h2>
         <div class="highlight-box">
           <p>At FoodFusion, we believe that your personal information belongs to you. We are committed to being
@@ -37,9 +37,9 @@
 
         <p>By using FoodFusion's services, you agree to the collection and use of information in accordance with this
           Privacy Policy. If you do not agree with our policies and practices, please do not use our services.</p>
-      </section>
+      </div>
 
-      <section id="information-we-collect" class="privacy-section">
+      <div id="information-we-collect">
         <h2>2. Information We Collect</h2>
 
         <h3>2.1 Personal Information You Provide</h3>
@@ -74,9 +74,9 @@
           <li>Analytics and advertising partners</li>
           <li>Other users who refer you to our platform</li>
         </ul>
-      </section>
+      </div>
 
-      <section id="how-we-use-information" class="privacy-section">
+      <div id="how-we-use-information">
         <h2>3. How We Use Your Information</h2>
         <p>We use your information for the following purposes:</p>
 
@@ -112,9 +112,9 @@
           <li>Investigate and prevent fraudulent or illegal activities</li>
           <li>Enforce our Terms of Service</li>
         </ul>
-      </section>
+      </div>
 
-      <section id="information-sharing" class="privacy-section">
+      <div id="information-sharing">
         <h2>4. Information Sharing and Disclosure</h2>
         <p>We do not sell, trade, or rent your personal information to third parties. We may share your information in
           the
@@ -144,11 +144,12 @@
         </ul>
 
         <h3>4.4 Business Transfers</h3>
-        <p>In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of the
+        <p>In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of
+          the
           business transaction, subject to confidentiality agreements.</p>
-      </section>
+      </div>
 
-      <section id="data-security" class="privacy-section">
+      <div id="data-security">
         <h2>5. Data Security</h2>
         <p>We implement comprehensive security measures to protect your personal information:</p>
 
@@ -174,9 +175,9 @@
           <p>In the unlikely event of a data breach that affects your personal information, we will notify you and
             relevant authorities within 72 hours as required by applicable laws.</p>
         </div>
-      </section>
+      </div>
 
-      <section id="cookies" class="privacy-section">
+      <div id="cookies">
         <h2>6. Cookies and Tracking Technologies</h2>
         <p>We use cookies and similar technologies to enhance your experience on our platform:</p>
 
@@ -197,9 +198,9 @@
           <li>Set your browser to notify you when cookies are being sent</li>
           <li>Use our cookie preference center to manage your choices</li>
         </ul>
-      </section>
+      </div>
 
-      <section id="your-rights" class="privacy-section">
+      <div id="your-rights">
         <h2>7. Your Rights and Choices</h2>
         <p>You have several rights regarding your personal information:</p>
 
@@ -236,11 +237,12 @@
           <p>To exercise any of these rights, please contact us using the information provided in the "Contact Us"
             section. We will respond to your request within 30 days.</p>
         </div>
-      </section>
+      </div>
 
-      <section id="children-privacy" class="privacy-section">
+      <div id="children-privacy">
         <h2>8. Children's Privacy</h2>
-        <p>FoodFusion is not intended for children under the age of 13. We do not knowingly collect personal information
+        <p>FoodFusion is not intended for children under the age of 13. We do not knowingly collect personal
+          information
           from children under 13 years of age.</p>
 
         <p>If you are a parent or guardian and believe your child has provided us with personal information, please
@@ -248,9 +250,9 @@
 
         <p>For users between 13 and 18 years old, we recommend parental guidance when using our services and sharing
           personal information online.</p>
-      </section>
+      </div>
 
-      <section id="international-transfers" class="privacy-section">
+      <div id="international-transfers">
         <h2>9. International Data Transfers</h2>
         <p>FoodFusion operates globally, and your information may be transferred to and processed in countries other
           than
@@ -263,11 +265,12 @@
           <li>Certification schemes and codes of conduct</li>
           <li>Your explicit consent for specific transfers</li>
         </ul>
-      </section>
+      </div>
 
-      <section id="data-retention" class="privacy-section">
+      <div id="data-retention">
         <h2>10. Data Retention</h2>
-        <p>We retain your personal information for as long as necessary to provide our services and fulfill the purposes
+        <p>We retain your personal information for as long as necessary to provide our services and fulfill the
+          purposes
           outlined in this Privacy Policy:</p>
 
         <ul>
@@ -278,9 +281,9 @@
           <li><strong>Legal Requirements:</strong> Some data may be retained longer to comply with legal obligations
           </li>
         </ul>
-      </section>
+      </div>
 
-      <section id="policy-changes" class="privacy-section">
+      <div id="policy-changes">
         <h2>11. Changes to This Privacy Policy</h2>
         <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal
           requirements, or other factors.</p>
@@ -295,13 +298,14 @@
 
         <p>We encourage you to review this Privacy Policy periodically to stay informed about how we protect your
           information.</p>
-      </section>
+      </div>
 
-      <section id="contact-us" class="privacy-section">
+      <div id="contact-us">
         <h2>12. Contact Us</h2>
-        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices,
+          please
           don't hesitate to contact us:</p>
-      </section>
+      </div>
     </div>
   </div>
 
